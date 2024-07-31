@@ -1,5 +1,5 @@
 resource "google_storage_bucket" "my-bucket" {
-  name                     = "tt-githubdemo-bucket-001"
+  name                     = "at-gt-bucket-00001"
   project                  = "hypnotic-epoch-411523"
   location                 = "US"
   force_destroy            = true
@@ -7,11 +7,9 @@ resource "google_storage_bucket" "my-bucket" {
 }
 #
 resource "google_storage_bucket" "my-bucket2" {
-  name                     = "tt-githubdemo-bucket-002"
+  name                     = "at-gt-bucket-00001"
   project                  = "hypnotic-epoch-411523"
   location                 = "US"
   force_destroy            = true
   public_access_prevention = "enforced"
 }
-#
-### dummy
