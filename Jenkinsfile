@@ -9,6 +9,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
+	       cleanWs()
                git "https://${GIT_TOKEN}@github.com/aldo2510/gcp-tf-jenkin.git"
             }
         }
@@ -23,6 +24,7 @@ pipeline {
         
         stage('Terraform Plan') {
             steps {
+		cleanWs()
                 script {
                     sh 'terraform plan -out=tfplan'
                 }
@@ -39,6 +41,7 @@ pipeline {
             steps {
                 script {
                     sh 'terraform apply tfplan'
+		    cleanWs()
                 }
             }
         }
