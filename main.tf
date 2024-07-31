@@ -7,7 +7,7 @@ resource "google_storage_bucket" "my-bucket" {
 }
 #
 resource "google_storage_bucket" "my-bucket2" {
-  name                     = "at-gt-bucket-00001"
+  name                     = "at-gt-bucket-00002"
   project                  = "hypnotic-epoch-411523"
   location                 = "US"
   force_destroy            = true
